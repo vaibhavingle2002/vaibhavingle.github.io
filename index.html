@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Ingle - AWS DevOps Engineer Portfolio</title>
+    <title>Vaibhav Ingle - AWS DevOps Engineer | Interactive Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,19 +14,19 @@
         }
 
         :root {
-            --dark: #0a0e27;
-            --darker: #050912;
-            --primary: #1a202c;
-            --accent: #3b82f6;
-            --accent-light: #60a5fa;
-            --text: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border: #334155;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --dark-bg: #0f0f1e;
+            --text: #ffffff;
+            --text-muted: #b0b8c1;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--darker);
+            background: var(--dark-bg);
             color: var(--text);
             overflow-x: hidden;
         }
@@ -36,9 +36,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 14, 39, 0.95);
+            background: rgba(15, 15, 30, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 2px solid;
+            border-image: var(--gradient-1) 1;
             z-index: 1000;
             padding: 1.5rem 2rem;
         }
@@ -52,9 +53,9 @@
         }
 
         nav .logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -75,7 +76,10 @@
         }
 
         nav a:hover {
-            color: var(--accent);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         /* ========== HERO SECTION ========== */
@@ -88,6 +92,7 @@
             overflow: hidden;
             margin-top: 80px;
             padding: 2rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(245, 87, 108, 0.1));
         }
 
         #threejs-container {
@@ -119,26 +124,29 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 900;
             margin-bottom: 1rem;
-            color: var(--text);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero .role {
-            font-size: 1.5rem;
-            color: var(--accent-light);
+            font-size: 1.8rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 2rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
             margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
             line-height: 1.8;
         }
 
@@ -146,35 +154,41 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.8rem;
+            gap: 1rem;
             margin-bottom: 3rem;
         }
 
         .tech-pill {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid var(--accent);
-            color: var(--accent-light);
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            font-size: 0.85rem;
+            background: var(--gradient-1);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
             font-weight: 600;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .tech-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             border: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -182,61 +196,84 @@
         }
 
         .btn-primary {
-            background: var(--accent);
+            background: var(--gradient-2);
             color: white;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
         }
 
         .btn-primary:hover {
-            background: var(--accent-light);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: var(--accent);
-            border: 2px solid var(--accent);
+            background: var(--gradient-3);
+            color: white;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
         }
 
         .btn-secondary:hover {
-            background: rgba(59, 130, 246, 0.15);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.6);
         }
 
         /* ========== SECTIONS ========== */
         section {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             font-weight: 900;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             text-align: center;
-            color: var(--text);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         /* ========== TECH STACK 3D SECTION ========== */
         #tech-stack {
-            background: var(--primary);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(245, 87, 108, 0.05));
+        }
+
+        .category-header {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-top: 4rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .category-header::before {
+            content: '';
+            width: 6px;
+            height: 2rem;
+            background: var(--gradient-2);
+            border-radius: 3px;
         }
 
         .tech-stack-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2.5rem;
             margin-bottom: 4rem;
         }
 
         .tech-card {
-            background: var(--dark);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem 1rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 2.5rem 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -244,91 +281,266 @@
             overflow: hidden;
         }
 
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .tech-card:nth-child(2n) {
+            --gradient-1: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .tech-card:nth-child(3n) {
+            --gradient-1: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .tech-card:nth-child(4n) {
+            --gradient-1: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .tech-card:nth-child(5n) {
+            --gradient-1: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .tech-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
         .tech-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
-            background: rgba(59, 130, 246, 0.05);
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+            border-color: rgba(102, 126, 234, 0.6);
+        }
+
+        .tech-card:hover::before {
+            opacity: 0.1;
         }
 
         .tech-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             transition: all 0.3s ease;
+            display: block;
         }
 
         .tech-card:hover .tech-icon {
-            transform: scale(1.15) rotateY(20deg);
+            transform: scale(1.2) rotateY(20deg);
         }
 
         .tech-name {
-            font-weight: 700;
+            font-weight: 800;
             color: var(--text);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
 
-        /* Category Headers */
-        .category-header {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--accent-light);
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
+        .tech-card:hover .tech-name {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ========== MODAL ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 2px solid transparent;
+            border-image: var(--gradient-1) 1;
+            animation: slideInUp 0.3s ease;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.3);
         }
 
-        .category-header::before {
-            content: '';
-            width: 4px;
-            height: 1.5rem;
-            background: var(--accent);
-            border-radius: 2px;
+        .modal-icon {
+            font-size: 3rem;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modal-description {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .modal-list {
+            list-style: none;
+        }
+
+        .modal-list li {
+            color: var(--text-muted);
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .modal-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #43e97b;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            background: none;
+            border: none;
+        }
+
+        .modal-close:hover {
+            color: var(--text);
+            transform: rotate(90deg);
         }
 
         /* ========== PROJECTS SECTION ========== */
         #projects {
-            background: var(--darker);
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.05), rgba(67, 233, 123, 0.05));
         }
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            gap: 3rem;
         }
 
         .project-card {
-            background: var(--primary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 2px solid transparent;
+            border-radius: 16px;
             overflow: hidden;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
         }
 
+        .project-card:nth-child(1) {
+            border-image: linear-gradient(135deg, #667eea, #764ba2) 1;
+        }
+
+        .project-card:nth-child(2) {
+            border-image: linear-gradient(135deg, #f093fb, #f5576c) 1;
+        }
+
+        .project-card:nth-child(3) {
+            border-image: linear-gradient(135deg, #4facfe, #00f2fe) 1;
+        }
+
         .project-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(59, 130, 246, 0.15);
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(102, 126, 234, 0.2);
         }
 
         .project-header {
-            padding: 2rem;
-            background: rgba(59, 130, 246, 0.05);
-            border-bottom: 1px solid var(--border);
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(245, 87, 108, 0.1));
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
         }
 
         .project-title {
-            color: var(--accent-light);
-            font-size: 1.25rem;
-            font-weight: 700;
+            color: var(--text);
+            font-size: 1.4rem;
+            font-weight: 800;
             margin-bottom: 0.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .project-body {
-            padding: 2rem;
+            padding: 2.5rem;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -337,7 +549,7 @@
         .project-description {
             color: var(--text-muted);
             line-height: 1.7;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             flex: 1;
         }
 
@@ -345,17 +557,16 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .metric {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            color: var(--accent-light);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            background: var(--gradient-1);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .project-tools {
@@ -365,79 +576,83 @@
         }
 
         .tool-tag {
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent);
-            padding: 0.4rem 0.8rem;
+            background: linear-gradient(135deg, rgba(67, 233, 123, 0.1), rgba(56, 249, 215, 0.1));
+            color: #43e97b;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            font-size: 0.85rem;
+            border: 1px solid rgba(67, 233, 123, 0.3);
+            font-weight: 600;
         }
 
         /* ========== EXPERIENCE SECTION ========== */
         #experience {
-            background: var(--primary);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(250, 112, 154, 0.05), rgba(254, 225, 64, 0.05));
         }
 
         .experience-item {
-            background: var(--dark);
-            border-left: 4px solid var(--accent);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border-left: 6px solid;
+            border-image: var(--gradient-2) 1;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
             transition: all 0.3s ease;
         }
 
         .experience-item:hover {
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
-            transform: translateX(5px);
+            box-shadow: 0 20px 50px rgba(245, 87, 108, 0.2);
+            transform: translateX(10px);
         }
 
         .job-title {
-            color: var(--accent-light);
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.3rem;
+            color: var(--text);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .company {
-            color: var(--accent);
-            font-weight: 600;
+            color: #43e97b;
+            font-weight: 700;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
 
         .date-range {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
         }
 
         .job-description ul {
             list-style: none;
-            margin-top: 1rem;
         }
 
         .job-description li {
             color: var(--text-muted);
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
             position: relative;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .job-description li::before {
-            content: "▸";
+            content: "→";
             position: absolute;
             left: 0;
-            color: var(--accent);
-            font-weight: 700;
+            color: #f5576c;
+            font-weight: 800;
+            font-size: 1.2rem;
         }
 
         /* ========== EDUCATION SECTION ========== */
         #education {
-            background: var(--darker);
+            background: linear-gradient(135deg, rgba(67, 233, 123, 0.05), rgba(56, 249, 215, 0.05));
         }
 
         .education-timeline {
@@ -446,145 +661,180 @@
         }
 
         .education-item {
-            background: var(--primary);
-            border-left: 4px solid var(--accent-light);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border-left: 6px solid;
+            border-image: var(--gradient-3) 1;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .education-item:hover {
-            box-shadow: 0 10px 30px rgba(96, 165, 250, 0.15);
+            box-shadow: 0 20px 50px rgba(79, 172, 254, 0.2);
+            transform: translateX(10px);
         }
 
         .degree {
             color: var(--text);
-            font-size: 1.15rem;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .university {
+            color: #00f2fe;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
-        .university {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
         .graduation-year {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
 
         .gpa {
             display: inline-block;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-light);
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            background: var(--gradient-3);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
         }
 
         /* ========== CONTACT SECTION ========== */
         #contact {
-            background: var(--primary);
-            border-top: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(245, 87, 108, 0.05));
             text-align: center;
         }
 
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
         }
 
         .contact-card {
-            background: var(--dark);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 2px solid transparent;
+            padding: 2.5rem;
+            border-radius: 16px;
             transition: all 0.3s ease;
         }
 
+        .contact-card:nth-child(1) {
+            border-image: var(--gradient-1) 1;
+        }
+
+        .contact-card:nth-child(2) {
+            border-image: var(--gradient-2) 1;
+        }
+
+        .contact-card:nth-child(3) {
+            border-image: var(--gradient-3) 1;
+        }
+
         .contact-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.2);
         }
 
         .contact-icon {
-            font-size: 2.5rem;
-            color: var(--accent-light);
+            font-size: 3rem;
             margin-bottom: 1rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .contact-label {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
         }
 
         .contact-value {
             color: var(--text);
-            font-weight: 600;
-            word-break: break-all;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .social-btn {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: var(--dark);
-            border: 2px solid var(--border);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 2px solid transparent;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent);
+            color: var(--text);
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+        }
+
+        .social-btn:nth-child(1) {
+            border-image: var(--gradient-1) 1;
+        }
+
+        .social-btn:nth-child(2) {
+            border-image: var(--gradient-2) 1;
+        }
+
+        .social-btn:nth-child(3) {
+            border-image: var(--gradient-3) 1;
+        }
+
+        .social-btn:nth-child(4) {
+            border-image: var(--gradient-4) 1;
         }
 
         .social-btn:hover {
-            background: var(--accent);
+            background: var(--gradient-1);
             color: white;
-            border-color: var(--accent);
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
         }
 
         /* ========== FOOTER ========== */
         footer {
-            background: var(--dark);
-            border-top: 1px solid var(--border);
+            background: rgba(15, 15, 30, 0.8);
+            border-top: 2px solid;
+            border-image: var(--gradient-1) 1;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             color: var(--text-muted);
         }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .hero .role {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             nav ul {
@@ -592,13 +842,8 @@
                 font-size: 0.85rem;
             }
 
-            .tech-stack-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-                gap: 1rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .modal-content {
+                padding: 2rem;
             }
 
             .cta-buttons {
@@ -622,6 +867,23 @@
                 transform: translateY(0);
             }
         }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-1);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gradient-2);
+        }
     </style>
 </head>
 <body>
@@ -631,10 +893,9 @@
             <div class="logo">VI</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="#tech">Tech</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -646,7 +907,7 @@
         <div class="hero-content">
             <h1>Vaibhav Ingle</h1>
             <p class="role">AWS DevOps Engineer</p>
-            <p>Hands-on experience in cloud infrastructure, CI/CD automation, containerization, and Infrastructure as Code. Specializing in AWS services, Docker, Kubernetes, Jenkins, and DevSecOps tools.</p>
+            <p>Cloud Infrastructure | CI/CD Automation | Container Orchestration | Infrastructure as Code</p>
             
             <div class="tech-pills">
                 <span class="tech-pill">AWS</span>
@@ -654,13 +915,11 @@
                 <span class="tech-pill">Kubernetes</span>
                 <span class="tech-pill">Terraform</span>
                 <span class="tech-pill">Jenkins</span>
-                <span class="tech-pill">CI/CD</span>
                 <span class="tech-pill">GitOps</span>
-                <span class="tech-pill">DevSecOps</span>
             </div>
 
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Projects <i class="fas fa-arrow-right"></i></a>
+                <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch <i class="fas fa-envelope"></i></a>
             </div>
         </div>
@@ -668,192 +927,260 @@
 
     <!-- Tech Stack Section -->
     <section id="tech-stack">
-        <h2 class="section-title">Tech Stack & Tools</h2>
+        <h2 class="section-title">Technology Stack</h2>
+        <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">Click on any service to learn more</p>
 
-        <div>
-            <h3 class="category-header"><i class="fab fa-aws"></i> AWS Services</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- AWS Services -->
+        <h3 class="category-header"><i class="fab fa-aws"></i> AWS Services</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('ec2')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🖥️</div>
                     <div class="tech-name">EC2</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('s3')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🪣</div>
                     <div class="tech-name">S3</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('vpc')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🔒</div>
                     <div class="tech-name">VPC</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('iam')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🔐</div>
                     <div class="tech-name">IAM</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('alb')">
+                <div class="tech-card-content">
                     <div class="tech-icon">⚖️</div>
                     <div class="tech-name">ALB</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('ecs')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📦</div>
                     <div class="tech-name">ECS</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('eks')">
+                <div class="tech-card-content">
                     <div class="tech-icon">☸️</div>
                     <div class="tech-name">EKS</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('ecr')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📚</div>
                     <div class="tech-name">ECR</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('rds')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🗄️</div>
                     <div class="tech-name">RDS</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('route53')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🌐</div>
                     <div class="tech-name">Route53</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('lambda')">
+                <div class="tech-card-content">
                     <div class="tech-icon">⚡</div>
                     <div class="tech-name">Lambda</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('cloudformation')">
+                <div class="tech-card-content">
                     <div class="tech-icon">☁️</div>
                     <div class="tech-name">CloudFormation</div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h3 class="category-header"><i class="fas fa-cogs"></i> CI/CD & Automation</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- CI/CD Tools -->
+        <h3 class="category-header"><i class="fas fa-cogs"></i> CI/CD & Automation</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('jenkins')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🔨</div>
                     <div class="tech-name">Jenkins</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('github')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🐱</div>
                     <div class="tech-name">GitHub</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('github-actions')">
+                <div class="tech-card-content">
                     <div class="tech-icon">⚙️</div>
                     <div class="tech-name">GitHub Actions</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('codepipeline')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📦</div>
                     <div class="tech-name">CodePipeline</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('codebuild')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🏗️</div>
                     <div class="tech-name">CodeBuild</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('codedeploy')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🚀</div>
                     <div class="tech-name">CodeDeploy</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('maven')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📦</div>
                     <div class="tech-name">Maven</div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h3 class="category-header"><i class="fab fa-docker"></i> Containers & Orchestration</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- Containers -->
+        <h3 class="category-header"><i class="fab fa-docker"></i> Containers & Orchestration</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('docker')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🐳</div>
                     <div class="tech-name">Docker</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('docker-compose')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📝</div>
                     <div class="tech-name">Docker Compose</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('docker-swarm')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🐝</div>
                     <div class="tech-name">Docker Swarm</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('kubernetes')">
+                <div class="tech-card-content">
                     <div class="tech-icon">☸️</div>
                     <div class="tech-name">Kubernetes</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('helm')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🎯</div>
                     <div class="tech-name">Helm</div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h3 class="category-header"><i class="fas fa-code"></i> Infrastructure as Code</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- IaC -->
+        <h3 class="category-header"><i class="fas fa-code"></i> Infrastructure as Code</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('terraform')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🏗️</div>
                     <div class="tech-name">Terraform</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('ansible')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🎭</div>
                     <div class="tech-name">Ansible</div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h3 class="category-header"><i class="fas fa-chart-line"></i> Monitoring & Logging</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- Monitoring -->
+        <h3 class="category-header"><i class="fas fa-chart-line"></i> Monitoring & Logging</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('prometheus')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📊</div>
                     <div class="tech-name">Prometheus</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('grafana')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📈</div>
                     <div class="tech-name">Grafana</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('cloudwatch')">
+                <div class="tech-card-content">
                     <div class="tech-icon">☁️</div>
                     <div class="tech-name">CloudWatch</div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h3 class="category-header"><i class="fas fa-shield-alt"></i> DevSecOps</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- DevSecOps -->
+        <h3 class="category-header"><i class="fas fa-shield-alt"></i> DevSecOps</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('sonarqube')">
+                <div class="tech-card-content">
                     <div class="tech-icon">✅</div>
                     <div class="tech-name">SonarQube</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('trivy')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🔍</div>
                     <div class="tech-name">Trivy</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('owasp')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🔐</div>
                     <div class="tech-name">OWASP</div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <h3 class="category-header"><i class="fas fa-terminal"></i> Languages & Tools</h3>
-            <div class="tech-stack-grid">
-                <div class="tech-card">
+        <!-- Languages -->
+        <h3 class="category-header"><i class="fas fa-terminal"></i> Languages & Tools</h3>
+        <div class="tech-stack-grid">
+            <div class="tech-card" onclick="openModal('python')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🐍</div>
                     <div class="tech-name">Python</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('bash')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🖥️</div>
                     <div class="tech-name">Bash</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('yaml')">
+                <div class="tech-card-content">
                     <div class="tech-icon">📄</div>
                     <div class="tech-name">YAML</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('hcl')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🔤</div>
                     <div class="tech-name">HCL</div>
                 </div>
-                <div class="tech-card">
+            </div>
+            <div class="tech-card" onclick="openModal('linux')">
+                <div class="tech-card-content">
                     <div class="tech-icon">🐧</div>
                     <div class="tech-name">Linux</div>
                 </div>
@@ -866,84 +1193,72 @@
         <h2 class="section-title">Real-World Projects</h2>
         
         <div class="projects-grid">
-            <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-header">
                     <div class="project-title">CI/CD DevSecOps Pipeline</div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem;">Tetris Application</div>
+                    <div style="color: var(--text-muted); font-size: 0.95rem;">Tetris Application</div>
                 </div>
                 <div class="project-body">
                     <div class="project-description">
-                        End-to-end CI/CD DevSecOps pipeline using Jenkins, automating build, test, and deployment stages with comprehensive security scanning.
+                        End-to-end CI/CD DevSecOps pipeline using Jenkins, automating build, test, and deployment stages with shift-left security scanning.
                     </div>
                     <div class="project-metrics">
-                        <span class="metric">60% effort reduction</span>
-                        <span class="metric">40% faster deployments</span>
-                        <span class="metric">20%+ vulnerabilities detected</span>
+                        <span class="metric">60% effort ↓</span>
+                        <span class="metric">40% faster</span>
+                        <span class="metric">20%+ vulns</span>
                     </div>
                     <div class="project-tools">
                         <span class="tool-tag">Jenkins</span>
                         <span class="tool-tag">SonarQube</span>
                         <span class="tool-tag">Trivy</span>
                         <span class="tool-tag">Docker</span>
-                        <span class="tool-tag">Kubernetes</span>
-                        <span class="tool-tag">Terraform</span>
-                        <span class="tool-tag">ArgoCD</span>
-                        <span class="tool-tag">Prometheus</span>
+                        <span class="tool-tag">EKS</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2 -->
             <div class="project-card">
                 <div class="project-header">
                     <div class="project-title">Three-Tier Architecture</div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem;">AWS Infrastructure</div>
+                    <div style="color: var(--text-muted); font-size: 0.95rem;">AWS Infrastructure</div>
                 </div>
                 <div class="project-body">
                     <div class="project-description">
-                        Scalable three-tier AWS architecture with modular Terraform IaC, implementing secure VPC networking with multi-AZ database setup.
+                        Scalable three-tier AWS architecture with modular Terraform IaC, implementing secure VPC networking.
                     </div>
                     <div class="project-metrics">
-                        <span class="metric">65% faster provisioning</span>
-                        <span class="metric">30% improved security</span>
-                        <span class="metric">99.9% availability</span>
+                        <span class="metric">65% faster</span>
+                        <span class="metric">30% secure ↑</span>
+                        <span class="metric">99.9% uptime</span>
                     </div>
                     <div class="project-tools">
                         <span class="tool-tag">Terraform</span>
-                        <span class="tool-tag">AWS VPC</span>
+                        <span class="tool-tag">VPC</span>
                         <span class="tool-tag">EC2</span>
-                        <span class="tool-tag">ALB</span>
                         <span class="tool-tag">RDS</span>
-                        <span class="tool-tag">IAM</span>
-                        <span class="tool-tag">CloudWatch</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-header">
                     <div class="project-title">ECS Container Orchestration</div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem;">Web Application Deployment</div>
+                    <div style="color: var(--text-muted); font-size: 0.95rem;">Web Application</div>
                 </div>
                 <div class="project-body">
                     <div class="project-description">
-                        Dockerized web application deployment on AWS ECS with Fargate and ALB integration for serverless container management with auto-scaling.
+                        Dockerized web application deployment on AWS ECS with Fargate and ALB for serverless management.
                     </div>
                     <div class="project-metrics">
-                        <span class="metric">50% fewer issues</span>
-                        <span class="metric">40% faster scaling</span>
-                        <span class="metric">35% improved monitoring</span>
+                        <span class="metric">50% issues ↓</span>
+                        <span class="metric">40% scaling</span>
+                        <span class="metric">35% monitor ↑</span>
                     </div>
                     <div class="project-tools">
                         <span class="tool-tag">Docker</span>
                         <span class="tool-tag">ECS</span>
                         <span class="tool-tag">Fargate</span>
                         <span class="tool-tag">ALB</span>
-                        <span class="tool-tag">Route53</span>
-                        <span class="tool-tag">ECR</span>
-                        <span class="tool-tag">CloudWatch</span>
                     </div>
                 </div>
             </div>
@@ -960,10 +1275,10 @@
             <div class="date-range">Mar 2024 - Sep 2024</div>
             <div class="job-description">
                 <ul>
-                    <li>Completed hands-on self-paced training on AWS services: EC2, S3, RDS, Lambda, VPC, IAM</li>
-                    <li>Built serverless S3 website hosting, RDS Blue-Green deployments</li>
-                    <li>Designed auto-scaled application deployment using ALB, Target Groups, and Auto Scaling Groups</li>
-                    <li>Gained practical expertise in AWS infrastructure management and cost optimization techniques</li>
+                    <li>Completed hands-on training on AWS services: EC2, S3, RDS, Lambda, VPC, IAM</li>
+                    <li>Built serverless S3 website hosting and RDS Blue-Green deployments</li>
+                    <li>Designed auto-scaled applications using ALB, Target Groups, and Auto Scaling Groups</li>
+                    <li>Practical experience in AWS infrastructure management and cost optimization</li>
                 </ul>
             </div>
         </div>
@@ -1004,7 +1319,7 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">Connect With Me</h2>
 
         <div class="contact-info">
             <div class="contact-card">
@@ -1027,10 +1342,10 @@
         </div>
 
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/vaibhav-ingle-82518a274" class="social-btn" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/vaibhav-ingle-82518a274" class="social-btn" title="LinkedIn" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/vaibhavingle2002" class="social-btn" title="GitHub">
+            <a href="https://github.com/vaibhavingle2002" class="social-btn" title="GitHub" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
             <a href="mailto:devopsguyvaibhav888@gmail.com" class="social-btn" title="Email">
@@ -1047,8 +1362,727 @@
         <p>&copy; 2024 Vaibhav Ingle | AWS DevOps Engineer | Hosted on GitHub Pages</p>
     </footer>
 
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
     <script>
-        // Three.js 3D Interactive Background
+        // Service Details Data
+        const serviceDetails = {
+            ec2: {
+                title: 'EC2 - Elastic Compute Cloud',
+                icon: '🖥️',
+                description: 'Secure, resizable compute capacity in the cloud. Used for hosting applications with auto-scaling capabilities.',
+                uses: [
+                    'Host web applications and APIs',
+                    'Run batch processing jobs',
+                    'Machine learning model training',
+                    'Database servers and caching layers'
+                ],
+                skills: [
+                    'Instance types and sizing',
+                    'Auto Scaling Groups',
+                    'Load balancing',
+                    'Security groups and NACLs',
+                    'AMI creation and management'
+                ]
+            },
+            s3: {
+                title: 'S3 - Simple Storage Service',
+                icon: '🪣',
+                description: 'Object storage service for storing and retrieving any amount of data from anywhere. Highly available and durable.',
+                uses: [
+                    'Static website hosting',
+                    'Data backup and archival',
+                    'Media storage and distribution',
+                    'Log analysis and data lakes'
+                ],
+                skills: [
+                    'Bucket policies and ACLs',
+                    'Versioning and lifecycle policies',
+                    'CloudFront integration',
+                    'Server-side encryption',
+                    'S3 event notifications'
+                ]
+            },
+            vpc: {
+                title: 'VPC - Virtual Private Cloud',
+                icon: '🔒',
+                description: 'Isolated network environment in AWS where you can launch resources with full control over networking.',
+                uses: [
+                    'Private network isolation',
+                    'Multi-tier application architecture',
+                    'Hybrid cloud connectivity',
+                    'Network security implementation'
+                ],
+                skills: [
+                    'Subnet design and management',
+                    'Route tables configuration',
+                    'NAT gateways and instances',
+                    'VPC peering and endpoints',
+                    'Network ACLs and flow logs'
+                ]
+            },
+            iam: {
+                title: 'IAM - Identity and Access Management',
+                icon: '🔐',
+                description: 'Manage access to AWS services and resources securely. Create users, groups, and roles with fine-grained permissions.',
+                uses: [
+                    'User and group management',
+                    'Role-based access control',
+                    'Service authentication',
+                    'Cross-account access'
+                ],
+                skills: [
+                    'Policy creation and management',
+                    'Role assumption workflows',
+                    'MFA configuration',
+                    'Access key management',
+                    'Permission boundaries'
+                ]
+            },
+            alb: {
+                title: 'ALB - Application Load Balancer',
+                icon: '⚖️',
+                description: 'Distributes incoming traffic across multiple targets. Supports path-based and host-based routing.',
+                uses: [
+                    'Distributing web traffic',
+                    'Microservices routing',
+                    'API gateway functionality',
+                    'High availability setup'
+                ],
+                skills: [
+                    'Target group configuration',
+                    'Health checks setup',
+                    'SSL/TLS termination',
+                    'Request routing rules',
+                    'Security group management'
+                ]
+            },
+            ecs: {
+                title: 'ECS - Elastic Container Service',
+                icon: '📦',
+                description: 'Highly scalable, high-performance container orchestration service. Run Docker containers on EC2 or Fargate.',
+                uses: [
+                    'Containerized application deployment',
+                    'Microservices architecture',
+                    'Batch processing',
+                    'CI/CD pipelines'
+                ],
+                skills: [
+                    'Task definitions',
+                    'Service configuration',
+                    'Fargate launch type',
+                    'Auto scaling policies',
+                    'Container logging and monitoring'
+                ]
+            },
+            eks: {
+                title: 'EKS - Elastic Kubernetes Service',
+                icon: '☸️',
+                description: 'Managed Kubernetes service that makes it easy to run Kubernetes on AWS without managing the control plane.',
+                uses: [
+                    'Kubernetes cluster management',
+                    'Enterprise application deployment',
+                    'Multi-container orchestration',
+                    'Persistent workloads'
+                ],
+                skills: [
+                    'Cluster creation and management',
+                    'Pod and deployment configuration',
+                    'Service mesh integration',
+                    'RBAC setup',
+                    'Persistent volumes'
+                ]
+            },
+            ecr: {
+                title: 'ECR - Elastic Container Registry',
+                icon: '📚',
+                description: 'Fully managed Docker container registry for storing, managing, and deploying Docker container images.',
+                uses: [
+                    'Docker image storage',
+                    'Image versioning',
+                    'Container CI/CD pipelines',
+                    'Image scanning for vulnerabilities'
+                ],
+                skills: [
+                    'Image push and pull',
+                    'Repository policies',
+                    'Image lifecycle policies',
+                    'Registry authentication',
+                    'Image scanning'
+                ]
+            },
+            rds: {
+                title: 'RDS - Relational Database Service',
+                icon: '🗄️',
+                description: 'Managed relational database service supporting MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB.',
+                uses: [
+                    'Primary database for applications',
+                    'Data persistence layer',
+                    'High availability setup',
+                    'Read replicas for scaling'
+                ],
+                skills: [
+                    'Database instance creation',
+                    'Backup and restore',
+                    'Multi-AZ deployment',
+                    'Read replicas',
+                    'Parameter groups'
+                ]
+            },
+            route53: {
+                title: 'Route53 - DNS Service',
+                icon: '🌐',
+                description: 'Scalable domain name system (DNS) web service designed to route end users to internet applications.',
+                uses: [
+                    'Domain name resolution',
+                    'Traffic routing policies',
+                    'Health checking',
+                    'Domain registration'
+                ],
+                skills: [
+                    'DNS record management',
+                    'Routing policies',
+                    'Health check configuration',
+                    'Alias records',
+                    'Traffic flow policies'
+                ]
+            },
+            lambda: {
+                title: 'Lambda - Serverless Compute',
+                icon: '⚡',
+                description: 'Serverless compute service that runs code without provisioning or managing servers.',
+                uses: [
+                    'Event-driven processing',
+                    'Scheduled tasks',
+                    'API backends',
+                    'Data transformation'
+                ],
+                skills: [
+                    'Function creation and deployment',
+                    'Event source mapping',
+                    'Environment variables',
+                    'VPC integration',
+                    'Lambda layers'
+                ]
+            },
+            cloudformation: {
+                title: 'CloudFormation - IaC Service',
+                icon: '☁️',
+                description: 'Infrastructure as Code service to define and provision AWS resources using templates.',
+                uses: [
+                    'Infrastructure automation',
+                    'Stack management',
+                    'Multi-environment deployment',
+                    'Version control for infrastructure'
+                ],
+                skills: [
+                    'Template creation (JSON/YAML)',
+                    'Stack operations',
+                    'Parameters and outputs',
+                    'Change sets',
+                    'Custom resources'
+                ]
+            },
+            jenkins: {
+                title: 'Jenkins - CI/CD Automation',
+                icon: '🔨',
+                description: 'Open-source automation server for building, testing, and deploying software.',
+                uses: [
+                    'Continuous integration pipelines',
+                    'Build automation',
+                    'Test execution',
+                    'Deployment automation'
+                ],
+                skills: [
+                    'Pipeline scripting',
+                    'Plugin management',
+                    'Agent configuration',
+                    'Build triggers',
+                    'Artifact management'
+                ]
+            },
+            github: {
+                title: 'GitHub - Version Control',
+                icon: '🐱',
+                description: 'Web-based platform for version control and collaboration using Git.',
+                uses: [
+                    'Source code management',
+                    'Collaboration and code review',
+                    'Pull request workflows',
+                    'Issue tracking'
+                ],
+                skills: [
+                    'Repository management',
+                    'Branch strategies',
+                    'Pull requests',
+                    'GitHub webhooks',
+                    'Team collaboration'
+                ]
+            },
+            'github-actions': {
+                title: 'GitHub Actions - Workflow Automation',
+                icon: '⚙️',
+                description: 'Native CI/CD feature in GitHub to automate workflows directly in repositories.',
+                uses: [
+                    'Automated testing',
+                    'Deployment workflows',
+                    'Code quality checks',
+                    'Release automation'
+                ],
+                skills: [
+                    'Workflow files (YAML)',
+                    'Actions creation',
+                    'Secrets management',
+                    'Matrix builds',
+                    'Conditional execution'
+                ]
+            },
+            codepipeline: {
+                title: 'AWS CodePipeline',
+                icon: '📦',
+                description: 'Fully managed continuous delivery service for automating software release pipelines.',
+                uses: [
+                    'Multi-stage deployment pipelines',
+                    'Continuous delivery',
+                    'Orchestrating CI/CD workflow',
+                    'Integration with other services'
+                ],
+                skills: [
+                    'Pipeline creation',
+                    'Stage configuration',
+                    'Action providers',
+                    'Artifacts',
+                    'Pipeline execution'
+                ]
+            },
+            codebuild: {
+                title: 'AWS CodeBuild',
+                icon: '🏗️',
+                description: 'Fully managed build service that compiles source code, runs tests, and produces ready-to-deploy artifacts.',
+                uses: [
+                    'Compilation of source code',
+                    'Running unit tests',
+                    'Creating artifacts',
+                    'Running custom scripts'
+                ],
+                skills: [
+                    'Build projects',
+                    'Build specs (YAML)',
+                    'Build environments',
+                    'Artifact storage',
+                    'Build caching'
+                ]
+            },
+            codedeploy: {
+                title: 'AWS CodeDeploy',
+                icon: '🚀',
+                description: 'Managed service for automating application deployments to various compute services.',
+                uses: [
+                    'Application deployment',
+                    'Rolling deployments',
+                    'Blue-green deployments',
+                    'Canary deployments'
+                ],
+                skills: [
+                    'Deployment groups',
+                    'AppSpec files',
+                    'Deployment configurations',
+                    'Hook scripts',
+                    'Rollback strategies'
+                ]
+            },
+            maven: {
+                title: 'Maven - Build Tool',
+                icon: '📦',
+                description: 'Build automation tool primarily used for Java projects.',
+                uses: [
+                    'Project building',
+                    'Dependency management',
+                    'Plugin execution',
+                    'Project distribution'
+                ],
+                skills: [
+                    'POM configuration',
+                    'Dependencies',
+                    'Plugin management',
+                    'Build profiles',
+                    'Maven repositories'
+                ]
+            },
+            docker: {
+                title: 'Docker - Container Platform',
+                icon: '🐳',
+                description: 'Platform for building, shipping, and running containerized applications.',
+                uses: [
+                    'Application containerization',
+                    'Consistent deployment',
+                    'Development environment parity',
+                    'Microservices architecture'
+                ],
+                skills: [
+                    'Dockerfile creation',
+                    'Image building',
+                    'Container running',
+                    'Volume management',
+                    'Network configuration'
+                ]
+            },
+            'docker-compose': {
+                title: 'Docker Compose - Multi-Container Tool',
+                icon: '📝',
+                description: 'Tool for defining and running multi-container Docker applications.',
+                uses: [
+                    'Local development environment',
+                    'Multi-service orchestration',
+                    'Testing with dependencies',
+                    'Quick deployments'
+                ],
+                skills: [
+                    'Compose file writing',
+                    'Service definition',
+                    'Network setup',
+                    'Volume management',
+                    'Environment variables'
+                ]
+            },
+            'docker-swarm': {
+                title: 'Docker Swarm - Orchestration',
+                icon: '🐝',
+                description: 'Native container orchestration tool built into Docker.',
+                uses: [
+                    'Container orchestration',
+                    'Service scaling',
+                    'Rolling updates',
+                    'High availability'
+                ],
+                skills: [
+                    'Swarm initialization',
+                    'Service creation',
+                    'Load balancing',
+                    'Update strategies',
+                    'Constraint configuration'
+                ]
+            },
+            kubernetes: {
+                title: 'Kubernetes - Container Orchestration',
+                icon: '☸️',
+                description: 'Open-source system for automating deployment, scaling, and management of containerized applications.',
+                uses: [
+                    'Container orchestration at scale',
+                    'Self-healing and auto-scaling',
+                    'Rolling updates',
+                    'Persistent storage'
+                ],
+                skills: [
+                    'Pod and deployment creation',
+                    'Service configuration',
+                    'Persistent volumes',
+                    'RBAC setup',
+                    'ConfigMaps and Secrets'
+                ]
+            },
+            helm: {
+                title: 'Helm - Kubernetes Package Manager',
+                icon: '🎯',
+                description: 'Package manager for Kubernetes that simplifies deployment and management of applications.',
+                uses: [
+                    'Kubernetes package management',
+                    'Application templating',
+                    'Release management',
+                    'Dependency management'
+                ],
+                skills: [
+                    'Chart creation',
+                    'Values files',
+                    'Templates',
+                    'Release management',
+                    'Chart repositories'
+                ]
+            },
+            terraform: {
+                title: 'Terraform - Infrastructure as Code',
+                icon: '🏗️',
+                description: 'Open-source tool for building, changing, and versioning infrastructure safely and efficiently.',
+                uses: [
+                    'Cloud resource provisioning',
+                    'Infrastructure automation',
+                    'Multi-cloud deployment',
+                    'State management'
+                ],
+                skills: [
+                    'HCL syntax',
+                    'Modules',
+                    'State files',
+                    'Variables and outputs',
+                    'Providers and resources'
+                ]
+            },
+            ansible: {
+                title: 'Ansible - Configuration Management',
+                icon: '🎭',
+                description: 'Simple, agentless automation tool for provisioning, configuration management, and application deployment.',
+                uses: [
+                    'Configuration management',
+                    'Application deployment',
+                    'Orchestration',
+                    'Cloud provisioning'
+                ],
+                skills: [
+                    'Playbook creation',
+                    'Inventory management',
+                    'Variables and templates',
+                    'Handlers and roles',
+                    'Module usage'
+                ]
+            },
+            prometheus: {
+                title: 'Prometheus - Monitoring',
+                icon: '📊',
+                description: 'Open-source monitoring and alerting toolkit for time-series metric collection.',
+                uses: [
+                    'Metrics collection',
+                    'Alert definition',
+                    'Performance monitoring',
+                    'Trend analysis'
+                ],
+                skills: [
+                    'Prometheus configuration',
+                    'Scrape targets',
+                    'Alert rules',
+                    'PromQL queries',
+                    'Service discovery'
+                ]
+            },
+            grafana: {
+                title: 'Grafana - Visualization',
+                icon: '📈',
+                description: 'Open-source visualization platform for time-series data from various data sources.',
+                uses: [
+                    'Metrics visualization',
+                    'Dashboard creation',
+                    'Alert notifications',
+                    'Data exploration'
+                ],
+                skills: [
+                    'Dashboard design',
+                    'Panel configuration',
+                    'Data source integration',
+                    'Templating',
+                    'Alert configuration'
+                ]
+            },
+            cloudwatch: {
+                title: 'CloudWatch - AWS Monitoring',
+                icon: '☁️',
+                description: 'Monitoring service for AWS resources and applications running on AWS.',
+                uses: [
+                    'Log monitoring',
+                    'Metric tracking',
+                    'Alert creation',
+                    'Application insights'
+                ],
+                skills: [
+                    'Log groups and streams',
+                    'Metric filters',
+                    'Alarms',
+                    'Dashboards',
+                    'Insights queries'
+                ]
+            },
+            sonarqube: {
+                title: 'SonarQube - Code Quality',
+                icon: '✅',
+                description: 'Platform for continuous inspection of code quality and security vulnerabilities.',
+                uses: [
+                    'Code quality analysis',
+                    'Vulnerability detection',
+                    'Technical debt tracking',
+                    'Code coverage measurement'
+                ],
+                skills: [
+                    'Project configuration',
+                    'Quality gates',
+                    'Rules customization',
+                    'Integration with CI/CD',
+                    'Report analysis'
+                ]
+            },
+            trivy: {
+                title: 'Trivy - Vulnerability Scanner',
+                icon: '🔍',
+                description: 'Vulnerability scanner for containers and other artifacts.',
+                uses: [
+                    'Container scanning',
+                    'Image vulnerability detection',
+                    'Dependency scanning',
+                    'Configuration scanning'
+                ],
+                skills: [
+                    'Image scanning',
+                    'Vulnerability assessment',
+                    'Report generation',
+                    'CI/CD integration',
+                    'Policy enforcement'
+                ]
+            },
+            owasp: {
+                title: 'OWASP Dependency-Check',
+                icon: '🔐',
+                description: 'Utility that identifies project dependencies and checks if they have known vulnerabilities.',
+                uses: [
+                    'Dependency vulnerability scanning',
+                    'Security compliance',
+                    'Risk assessment',
+                    'CVE detection'
+                ],
+                skills: [
+                    'Dependency scanning',
+                    'Report interpretation',
+                    'Vulnerability patching',
+                    'CI/CD integration',
+                    'Risk prioritization'
+                ]
+            },
+            python: {
+                title: 'Python Programming',
+                icon: '🐍',
+                description: 'High-level programming language used for scripting and automation in DevOps.',
+                uses: [
+                    'Automation scripts',
+                    'Infrastructure automation (Boto3)',
+                    'Data processing',
+                    'Tool development'
+                ],
+                skills: [
+                    'Scripting and automation',
+                    'AWS SDK (Boto3)',
+                    'Data structures',
+                    'Libraries and modules',
+                    'Error handling'
+                ]
+            },
+            bash: {
+                title: 'Bash Shell Scripting',
+                icon: '🖥️',
+                description: 'Shell scripting language for Linux/Unix command-line automation.',
+                uses: [
+                    'System administration',
+                    'Build scripts',
+                    'Deployment scripts',
+                    'System monitoring'
+                ],
+                skills: [
+                    'Shell scripting',
+                    'Command execution',
+                    'Conditional logic',
+                    'File operations',
+                    'Process management'
+                ]
+            },
+            yaml: {
+                title: 'YAML Configuration Language',
+                icon: '📄',
+                description: 'Human-readable data serialization language commonly used in configuration files.',
+                uses: [
+                    'Configuration files',
+                    'Kubernetes manifests',
+                    'Docker Compose files',
+                    'Pipeline definitions'
+                ],
+                skills: [
+                    'YAML syntax',
+                    'Data structures',
+                    'File formatting',
+                    'Template usage',
+                    'Schema validation'
+                ]
+            },
+            hcl: {
+                title: 'HCL - HashiCorp Language',
+                icon: '🔤',
+                description: 'Configuration language used in Terraform for defining infrastructure.',
+                uses: [
+                    'Terraform configuration',
+                    'Resource definition',
+                    'Module creation',
+                    'Conditional logic'
+                ],
+                skills: [
+                    'Resource syntax',
+                    'Variables and locals',
+                    'Modules',
+                    'Conditional expressions',
+                    'Dynamic blocks'
+                ]
+            },
+            linux: {
+                title: 'Linux Administration',
+                icon: '🐧',
+                description: 'Operating system administration for Linux-based systems.',
+                uses: [
+                    'Server management',
+                    'System administration',
+                    'User and permissions',
+                    'Network configuration'
+                ],
+                skills: [
+                    'Command-line usage',
+                    'File system management',
+                    'User management',
+                    'Package management',
+                    'Service management'
+                ]
+            }
+        };
+
+        // Open Modal Function
+        function openModal(service) {
+            const data = serviceDetails[service];
+            if (!data) return;
+
+            const html = `
+                <div class="modal-header">
+                    <div class="modal-icon">${data.icon}</div>
+                    <div class="modal-title">${data.title}</div>
+                </div>
+                <p class="modal-description">${data.description}</p>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">Common Uses</div>
+                    <ul class="modal-list">
+                        ${data.uses.map(u => `<li>${u}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">Skills & Knowledge</div>
+                    <ul class="modal-list">
+                        ${data.skills.map(s => `<li>${s}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+
+            document.getElementById('modalContent').innerHTML = html;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        // Close Modal Function
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('modal')) {
+                closeModal();
+            }
+        });
+
+        // Three.js 3D Background
         let scene, camera, renderer;
 
         function initThreeJS() {
@@ -1062,60 +2096,66 @@
             container.appendChild(renderer.domElement);
             camera.position.z = 30;
 
-            // Create floating 3D cubes representing tech
-            const cubes = [];
-            for (let i = 0; i < 20; i++) {
-                const geometry = new THREE.BoxGeometry(1, 1, 1);
+            // Create colorful floating spheres
+            const spheres = [];
+            const colors = [0x667eea, 0xf093fb, 0x4facfe, 0x43e97b, 0xfa709a];
+            
+            for (let i = 0; i < 25; i++) {
+                const geometry = new THREE.IcosahedronGeometry(Math.random() * 0.5 + 0.3, 4);
                 const material = new THREE.MeshPhongMaterial({
-                    color: new THREE.Color().setHSL(Math.random() * 0.3 + 0.5, 1, 0.6),
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    emissive: colors[Math.floor(Math.random() * colors.length)],
+                    emissiveIntensity: 0.3,
                     wireframe: false
                 });
-                const cube = new THREE.Mesh(geometry, material);
-                cube.position.set(
+                const sphere = new THREE.Mesh(geometry, material);
+                sphere.position.set(
                     (Math.random() - 0.5) * 100,
                     (Math.random() - 0.5) * 100,
                     (Math.random() - 0.5) * 50
                 );
-                cube.velocity = {
-                    x: (Math.random() - 0.5) * 0.5,
-                    y: (Math.random() - 0.5) * 0.5,
-                    z: (Math.random() - 0.5) * 0.5
+                sphere.velocity = {
+                    x: (Math.random() - 0.5) * 0.3,
+                    y: (Math.random() - 0.5) * 0.3,
+                    z: (Math.random() - 0.5) * 0.2
                 };
-                scene.add(cube);
-                cubes.push(cube);
+                scene.add(sphere);
+                spheres.push(sphere);
             }
 
             // Lighting
-            const light = new THREE.PointLight(0x60a5fa, 1, 1000);
-            light.position.set(50, 50, 50);
-            scene.add(light);
+            const light1 = new THREE.PointLight(0x667eea, 1.5, 1000);
+            light1.position.set(50, 50, 50);
+            scene.add(light1);
 
-            const ambientLight = new THREE.AmbientLight(0x3b82f6, 0.5);
+            const light2 = new THREE.PointLight(0xf093fb, 1, 800);
+            light2.position.set(-50, -50, 50);
+            scene.add(light2);
+
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
             scene.add(ambientLight);
 
-            // Animation loop
+            // Animation
             function animate() {
                 requestAnimationFrame(animate);
 
-                cubes.forEach(cube => {
-                    cube.rotation.x += 0.01;
-                    cube.rotation.y += 0.01;
-                    cube.position.x += cube.velocity.x;
-                    cube.position.y += cube.velocity.y;
-                    cube.position.z += cube.velocity.z;
+                spheres.forEach(sphere => {
+                    sphere.rotation.x += 0.005;
+                    sphere.rotation.y += 0.008;
+                    sphere.position.x += sphere.velocity.x;
+                    sphere.position.y += sphere.velocity.y;
+                    sphere.position.z += sphere.velocity.z;
 
-                    // Boundary wrapping
-                    if (cube.position.x > 50) cube.position.x = -50;
-                    if (cube.position.x < -50) cube.position.x = 50;
-                    if (cube.position.y > 50) cube.position.y = -50;
-                    if (cube.position.y < -50) cube.position.y = 50;
+                    if (sphere.position.x > 50) sphere.position.x = -50;
+                    if (sphere.position.x < -50) sphere.position.x = 50;
+                    if (sphere.position.y > 50) sphere.position.y = -50;
+                    if (sphere.position.y < -50) sphere.position.y = 50;
                 });
 
                 renderer.render(scene, camera);
             }
 
             animate();
-
             window.addEventListener('resize', onWindowResize);
         }
 
@@ -1148,7 +2188,7 @@
             observeElements();
         });
 
-        // Smooth scroll navigation
+        // Smooth scroll
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
